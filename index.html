@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharamveer Shah — Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --accent: #1f2937;
+      --card: #f9fafb;
+      --primary: #3b82f6;
+      --gradient-start: #667eea;
+      --gradient-end: #764ba2;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--accent);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .site-header {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      padding: 28px 0;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .avatar-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+
+    .intro h1 {
+      margin: 0;
+      font-size: 28px;
+      color: white;
+    }
+
+    .role {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 6px 0;
+    }
+
+    .location {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 12px;
+      transition: opacity 0.3s ease;
+    }
+
+    .links a:hover {
+      opacity: 0.8;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 12px;
+      margin: 18px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f6;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    .skills-grid li {
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #eef2f6;
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .skills-grid li:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .project {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .project:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .project h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .site-footer {
+      padding: 20px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid #eee;
+      margin-top: 24px;
+      background: white;
+    }
+
+    @media (max-width: 640px) {
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .avatar {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Profile -->
+  <header class="site-header">
+    <div class="container">
+      <div class="profile">
+        <div class="avatar-container">
+          <!-- Manual Image -->
+          <img src="photo.png" class="avatar" alt="Profile Image" id="profileAvatar">
+        </div>
+        <div class="intro">
+          <h1>Dharamveer Shah</h1>
+          <p class="role">Java Developer • Spring Boot • SQL</p>
+          <p class="location">Delhi, India</p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/dharamveer-shah-8b5a17256" target="_blank">🔗LinkedIn</a>
+            <a href="https://github.com/DharamveerShah" target="_blank">🐙GitHub</a>
+            <a href="mailto:dharamveershah236@gmail.com">✉Email</a>
+            <a href="tel:9560069871">📞 Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I am a motivated Java developer. I have completed my B.Com degree from IGNOU and a Diploma in Computer Application. I also have a Java certification and hands-on experience in building applications using Java, Spring Boot, and SQL. I live in Delhi and I am searching for a job where I can work on backend and full-stack development.</p>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>SQL / JDBC</li>
+        <li>REST APIs</li>
+        <li>Git</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>IoT</li>
+        <li>Basic Linux / Ubuntu</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Highlighted Projects</h2>
+
+      <article class="project">
+        <h3>Inventory Management (Java + Spring Boot)</h3>
+        <p>A CRUD web application for tracking products, stock levels, and suppliers. Built with Spring Boot, REST APIs, and a relational database (MySQL).</p>
+        <p><strong>Tech:</strong> Java, Spring Boot, MySQL, JPA, REST</p>
+      </article>
+
+      <article class="project">
+        <h3>Online Library System (Java)</h3>
+        <p>Desktop/console-based library management tool with features for lending, returns and report generation. Emphasizes OOP concepts and file-based persistence.</p>
+        <p><strong>Tech:</strong> Core Java, File I/O, Collections</p>
+      </article>
+
+      <article class="project">
+        <h3>Certificate Dashboard</h3>
+        <p>Simple dashboard to showcase certificates and share links to verified credentials (e.g., Java certification). Good for recruiters to validate learning progress.</p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      </article>
+    </section>
+
+    <section id="certificates" class="card">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Java Certification — Uploaded to LinkedIn</li>
+        <li>Diploma in Computer Application Certification — Uploaded to LinkedIn</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>If you'd like to contact me, feel free to reach out through any of the following channels:</p>
+      <p><strong>Email:</strong> dharamveershah236@gmail.com</p>
+      <p><strong>Phone:</strong> +91-9560069871</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 — Portfolio of <strong>Dharamveer Shah</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
