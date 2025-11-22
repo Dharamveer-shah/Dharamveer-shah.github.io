@@ -150,6 +150,26 @@
       color: var(--primary);
       margin-bottom: 8px;
     }
+    
+    .project-links {
+      margin-top: 12px;
+    }
+    
+    .project-links a {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+      margin-right: 10px;
+    }
+    
+    .project-links a:hover {
+      background: #2563eb;
+    }
 
     .site-footer {
       padding: 20px 0;
@@ -225,6 +245,16 @@
       <h2>Highlighted Projects</h2>
 
       <article class="project">
+        <h3>Employee Record Management System</h3>
+        <p>A comprehensive system for managing employee records, including personal details, employment history, and performance metrics.</p>
+        <p><strong>Tech:</strong> Java, Spring Boot, MySQL, REST APIs</p>
+        <div class="project-links">
+          <a href="https://github.com/Dharamveer-shah/employee_record" target="_blank">Employee Record Management</a>
+          <a href="https://github.com/Dharamveer-shah/Student_Record" target="_blank">Student Management Record</a>
+        </div>
+      </article>
+
+      <article class="project">
         <h3>Inventory Management (Java + Spring Boot)</h3>
         <p>A CRUD web application for tracking products, stock levels, and suppliers. Built with Spring Boot, REST APIs, and a relational database (MySQL).</p>
         <p><strong>Tech:</strong> Java, Spring Boot, MySQL, JPA, REST</p>
@@ -246,8 +276,13 @@
     <section id="certificates" class="card">
       <h2>Certificates</h2>
       <ul>
-        <li>Java Certification — Uploaded to LinkedIn</li>
-        <li>Diploma in Computer Application Certification — Uploaded to LinkedIn</li>
+        <li>
+          Java Certification — 
+          <a href="https://github.com/Dharamveer-shah/Java-certificate" target="_blank">View Certificate on GitHub</a>
+        </li>
+        <li>Diploma in Computer Application Certification —
+          <a href="https://github.com/Dharamveer-shah/certificate" target="_blank">View Certificate on GitHub</a>
+        </li>
       </ul>
     </section>
 
@@ -267,4 +302,3 @@
 
 </body>
 </html>
-
